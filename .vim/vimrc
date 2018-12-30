@@ -1,0 +1,41 @@
+execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
+set background=light
+colorscheme solarized
+
+set hlsearch
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_java_checkers = []
+
+nmap \gs :Gstatus<CR>
+nmap \gw :Ggrep <C-R><C-W><CR>
+nmap \stm :SyntasticToggleMode<CR>
+nmap \sc :SyntasticCheck<CR>
+
+nmap <C-K> <C-W>k
+nmap <C-J> <C-W>j
+nmap <C-H> <C-W>h
+nmap <C-L> <C-W>l
+nnoremap <C-L><C-L> <C-L>
+
+" incsearch-fuzzy https://github.com/haya14busa/incsearch-fuzzy.vim
+map z/ <Plug>(incsearch-fuzzy-/)
+map z? <Plug>(incsearch-fuzzy-?)
+map zg/ <Plug>(incsearch-fuzzy-stay)
+
+" restore lat cursor position in the current buffer
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif

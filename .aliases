@@ -1,0 +1,15 @@
+# alias definitions for bash & zsh
+
+function git-current-branch() {
+	git rev-parse --abbrev-ref HEAD
+}
+
+alias s='git status $*'
+alias ga='git add $*'
+alias gb='git branch $*'
+alias gc='git commit $*'
+alias gco='git checkout $*'
+alias ggpush='git push $* origin $(git-current-branch)'
+alias ggpull='git pull $* origin $(git-current-branch)'
+
+alias start='cmd.exe /c start $*'
