@@ -1,18 +1,22 @@
-dotenv="$HOME/.dotenv"
-ln -s $dotenv/.aliases $HOME/.aliases
-ln -s $dotenv/.aws $HOME/.aws
-ln -s $dotenv/.bashrc $HOME/.bashrc
-ln -s $dotenv/.profile $HOME/.profile
-ln -s $dotenv/.gitconfig $HOME/.gitconfig
-ln -s $dotenv/.tmux.conf $HOME/.tmux.conf
+dotfiles="$HOME/.dotfiles"
+ln="ln -f"
 
-ln -s $dotenv/.vim $HOME/.vim
-ln -s $dotenv/.vim/vimrc $HOME/.vimrc
-cd $dotenv/.vim/bundle
-git submodule init
+# Update all submodules
+git submodule init;
 git submodule update --remote --merge
-# update vim-bundles
 
-ln -s /mnt/c/Users/grig/Projects $HOME/Projects
-ln -s /mnt/c/Users/grig/Downloads $HOME/Downloads
-ln -s /mnt/c/Users/grig/Scratch $HOME/Scratch
+$ln -s $dotfiles/.aliases $HOME/.aliases
+$ln -s $dotfiles/.aws $HOME/.aws
+$ln -s $dotfiles/.bashrc $HOME/.bashrc
+$ln -s $dotfiles/.profile $HOME/.profile
+$ln -s $dotfiles/.gitconfig $HOME/.gitconfig
+
+$ln -s $dotfiles/.vim $HOME/.vim
+$ln -s $dotfiles/.vim/vimrc $HOME/.vimrc
+
+ln -s $dotfiles/tmux $HOME/.tmux
+ln -s $dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+
+$ln -s /mnt/c/Users/grig/Projects $HOME/Projects
+$ln -s /mnt/c/Users/grig/Downloads $HOME/Downloads
+$ln -s /mnt/c/Users/grig/Scratch $HOME/Scratch
