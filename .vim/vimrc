@@ -1,11 +1,22 @@
 execute pathogen#infect()
 
+if !has("gui_running")
+	set term=xterm
+	set t_Co=256
+	let &t_AB="\e[48;5;%dm"
+	let &t_AF="\e[38;5;%dm"
+endif
+
 syntax on
 filetype plugin indent on
-set background=light
+set background=dark
 colorscheme solarized
 
 set hlsearch
+
+" statusline settings
+" 1. Setup default statulin
+set statusline=%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P
 
 " Syntastic settings
 set statusline+=%#warningmsg#
@@ -19,6 +30,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_yaml_checkers = ['yamllint']
 let g:syntastic_java_checkers = []
 
+" Mappings
 nmap \gs :Gstatus<CR>
 nmap \gw :Ggrep <C-R><C-W><CR>
 nmap \stm :SyntasticToggleMode<CR>
