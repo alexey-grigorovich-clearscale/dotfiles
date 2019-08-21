@@ -40,3 +40,12 @@
 [submodule ".tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/tmux-colors-solarized"]
+	path = tmux/tmux-colors-solarized
+	url = https://github.com/seebi/tmux-colors-solarized
+[submodule "dircolors-solarized"]
+	path = dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized
+[submodule ".vim/bundle/vim-tbone"]
+	path = .vim/bundle/vim-tbone
+	url = git@github.com:tpope/vim-tbone.git
