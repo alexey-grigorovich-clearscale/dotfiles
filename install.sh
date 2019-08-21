@@ -17,6 +17,11 @@ $ln -s $dotfiles/.vim/vimrc $HOME/.vimrc
 ln -s $dotfiles/tmux $HOME/.tmux
 ln -s $dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 
+# zsh
+$ln -s $dotfiles/zsh/zshrc $HOME/.zshrc
+
 $ln -s /mnt/c/Users/grig/Projects $HOME/Projects
 $ln -s /mnt/c/Users/grig/Downloads $HOME/Downloads
 $ln -s /mnt/c/Users/grig/Scratch $HOME/Scratch
+
+
