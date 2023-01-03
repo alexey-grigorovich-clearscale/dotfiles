@@ -43,3 +43,4 @@ else
     start_agent;
 fi
 
+. "$HOME/.cargo/env"

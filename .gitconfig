@@ -1,6 +1,6 @@
 [user]
 	name = Alexey Grigorovich
-	email = alexey.grigorovich@clearscale.net
+	email = alexey.grigorovich@clearscale.com
 
 # WSL-specific hacks: use bold for everything
 [color "diff"]
@@ -15,4 +15,4 @@
 [alias]
 	lol = log --oneline --graph --decorate
 [credential]
-	helper = cache --timeout=900
+	helper = /mnt/c/Program\\ Files\\ \\(x86\\)/Git\\ Credential\\ Manager/git-credential-manager-core.exe

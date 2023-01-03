@@ -125,3 +125,8 @@ export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
 alias ssh="/usr/bin/ssh $SSH_CONFIG"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/grig/.sdkman"
+[[ -s "/home/grig/.sdkman/bin/sdkman-init.sh" ]] && source "/home/grig/.sdkman/bin/sdkman-init.sh"
+. "$HOME/.cargo/env"
